@@ -49,6 +49,8 @@ export async function DELETE(
   request: Request,
   { params }: { params: { number: string } }
 ) {
+  // ... El resto del código de la función ...
+}
   const numberId = parseInt(params.number);
 
   if (isNaN(numberId)) {
