@@ -45,12 +45,11 @@ export async function POST(
 }
 
 // La función DELETE debe tener esta firma exacta para ser válida
+// La función DELETE debe tener esta firma exacta para ser válida
 export async function DELETE(
   request: Request,
   { params }: { params: { number: string } }
 ) {
-  // ... El resto del código de la función ...
-}
   const numberId = parseInt(params.number);
 
   if (isNaN(numberId)) {
