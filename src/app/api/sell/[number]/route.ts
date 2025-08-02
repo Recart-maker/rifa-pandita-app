@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 const prisma = new PrismaClient();
 
-// Función para marcar un número como vendido
+// La función POST debe tener esta firma exacta para ser válida
 export async function POST(
   request: Request,
   { params }: { params: { number: string } }
@@ -44,7 +44,7 @@ export async function POST(
   }
 }
 
-// Función para desmarcar un número como vendido
+// La función DELETE debe tener esta firma exacta para ser válida
 export async function DELETE(
   request: Request,
   { params }: { params: { number: string } }
