@@ -1,0 +1,20 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+  // ¡Elimina la línea 'output' o coméntala!
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Asegúrate de que tu modelo RaffleNumber también esté aquí
+model RaffleNumber {
+  id          Int       @id @default(autoincrement())
+  isSold      Boolean   @default(false)
+  buyerName   String?
+  soldAt      DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
